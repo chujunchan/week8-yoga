@@ -1,0 +1,10 @@
+.modal-minwidth-course{
+    margin: 0 auto;
+    max-width: 345px;
+    @include media-breakpoint-up(md) {
+        max-width: 690px;
+    }
+    @include media-breakpoint-up(lg) {
+        max-width: 920px;
+    }
+}

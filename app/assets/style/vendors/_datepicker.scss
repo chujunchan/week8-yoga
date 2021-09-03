@@ -1,0 +1,11 @@
+.datepicker{
+    &-cell.selected, &-cell.selected:hover{
+        background-color: $primary;
+    }
+    &-picker{
+        color: $primary;
+    }
+    &-input, &-input.in-edit{
+        color: $primary;
+    }
+}

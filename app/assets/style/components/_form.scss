@@ -1,0 +1,15 @@
+.form{
+    &-check-input, &-control, &-select{
+        border: 1px solid $secondary;
+    }
+    &-check-input:checked{
+        border: 1px solid $secondary;
+        background-color: $secondary;
+    }
+    &-control, &-control::placeholder{
+        color: $secondary;
+    }
+    &-select{
+        color: $primary;
+    }
+}

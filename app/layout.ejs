@@ -7,53 +7,144 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><%- title %></title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined">
+    <script src="https://kit.fontawesome.com/14d49e57b0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.css"/> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/css/datepicker.min.css">
     <link rel="stylesheet" href="./assets/style/all.css">
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <!-- header -->
+    <header class="position-sticky top-0 w-100 z-index-999">
+      <nav class="navbar navbar-expand-lg bg-light py-7 py-lg-8 shadow-sm">
+        <div class="container">
+          <h1>
+            <a class="d-block logo logo-header" href="index.html">DOYOGA</a>
+          </h1>
+          <button class="navbar-toggler border-0 p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="material-icons-outlined fs-xl text-primary hoverText--secondary">
+              reorder
+              </span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav justify-content-center flex-grow-1 mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link text-center fw-light hoverText--secondary px-6" href="courseIntro.html">課程介紹</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-center fw-light hoverText--secondary px-6" href="yogaSpace.html">瑜珈空間</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-center fw-light hoverText--secondary px-6" href="monthlyCurriculum.html">當月課表</a>
+              </li>
+            </ul>
+            <div class="d-flex justify-content-center">
+              <a class="btn btn-lg btn-outline-primary hoverBg--primary rounded-4 text-center fs-6 me-6" href="reservation_step1-1_planChoice.html">立即預約</a>
+              <a class="btn btn-lg btn-outline-primary hoverBg--primary rounded-4 text-center fs-6" href="contactUs.html">聯絡我們</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <%- contents %>
+    </main>
+
+    <!-- footer -->
+    <footer>
+      <div class="bg-primary text-white">
+        <!-- subscription -->
+        <div class="border-bottom border-white py-9 py-md-12">
+          <div class="container">
+            <div class="row justify-content-between align-items-lg-center">
+              <div class="col-lg-6">
+                <h2 class="fs-4 fs-md-3 fw-normal fw-md-medium mb-2 mb-lg-0">現在訂閱，獲得課程優惠碼！</h2>
+              </div>
+              <div class="col-lg-4">
+                <div class="row">
+                  <div class="col-md-6 col-lg-12">
+                    <div class="input-group input-group-lg">
+                      <input type="email" name="subscriberEmail" class="form-control" placeholder="輸入您的電子信箱" aria-label="subscriberEmail" aria-describedby="basic-addon2">
+                      <button type="button" class="btn btn-secondary text-white" id="basic-addon2">訂閱</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- footer info -->
+        <div class="container">
+          <div class="d-flex justify-content-between py-9 py-md-12">
+            <div>
+              <h3><a class="d-block logo logo-footer mb-2" href="index.html">DOYOGA</a></h3>
+              <ul class="list-unstyled mb-2 mb-md-0">
+                <li>
+                  <a class="d-block text-white fw-light hoverOpacity--50 mb-2" href="courseIntro.html">課程介紹</a>
+                </li>
+                <li>
+                  <a class="d-block text-white fw-light hoverOpacity--50 mb-2" href="yogaSpace.html">瑜珈空間</a>
+                </li>
+                <li>
+                  <a class="d-block text-white fw-light hoverOpacity--50" href="monthlyCurriculum.html">當月課表</a>
+                </li>
               </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li>
-          </ul>
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
+              <p class="d-md-none mb-0">© 2021. All Rights Reserved.</p>
+            </div>
+            <div class="d-flex align-items-end">
+              <p class="d-none d-md-block mb-0">© 2021. All Rights Reserved.</p>
+            </div>
+            <ul class="list-unstyled d-flex">
+              <li>
+                <a class="hoverOpacity--50" href="https://www.facebook.com/" target="blank">
+                  <span class="fab fa-facebook text-white fs-4 px-1"></span>
+                </a>
+              </li>
+              <li>
+                <a class="hoverOpacity--50" href="https://www.instagram.com/" target="blank">
+                  <span class="fab fa-instagram text-white fs-4 px-1"></span>
+                </a>
+              </li>
+              <li>
+                <a class="hoverOpacity--50" href="https://line.me/zh-hant/" target="blank">
+                  <span class="fab fa-line text-white fs-4 px-1"></span>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </nav>
-
-    <%- contents %>
-
-    <footer class="footer">
-      footer
     </footer>
 
+    <!-- social media icon -->
+    <div class="d-none d-lg-block position-fixed top-50 end-0 translate-middle-y z-index-3">
+      <ul class="list-unstyled d-flex flex-column align-items-center me-6">
+        <li class="mb-2">
+          <a class="hoverText--secondary" href="https://www.facebook.com/" target="blank">
+            <span class="fab fa-facebook display-5 lh-1"></span>
+          </a>
+        </li>
+        <li class="mb-2">
+          <a class="hoverText--secondary" href="https://www.instagram.com/" target="blank">
+            <span class="fab fa-instagram display-5 lh-1"></span>
+          </a>
+        </li>
+        <li>
+          <a class="hoverText--secondary" href="https://line.me/zh-hant/" target="blank">
+            <span class="fab fa-line display-5 lh-1"></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- JS setting -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/js/datepicker-full.min.js"></script>
     <script src="./assets/js/vendors.js"></script>
     <script src="./assets/js/all.js"></script>
   </body>

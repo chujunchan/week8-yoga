@@ -1,0 +1,18 @@
+body{
+    font-family: 'Noto Sans TC', sans-serif;
+    color: $primary;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul, ol{
+    margin-bottom: 0px;
+}

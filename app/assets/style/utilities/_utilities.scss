@@ -1,0 +1,113 @@
+$utilities: map-merge(
+  $utilities,
+  (
+    
+    "width": map-merge(
+      map-get($utilities, "width"),
+      (
+        responsive: true,
+        values:
+            map-merge(
+              map-get(map-get($utilities, "width"), "values"),
+              (
+                x0\.48: 48px,
+                x0\.68: 68px,
+                x0\.94: 94px,
+                x0\.96: 96px,
+                x1\.65: 165px,
+                x2\.64: 264px,
+                x4\.18: 418px,
+              )
+            ),
+      ),
+    ),
+
+    "height": map-merge(
+      map-get($utilities, "height"),
+      (
+        responsive: true,
+        values:
+            map-merge(
+              map-get(map-get($utilities, "height"), "values"),
+              (
+                x0\.48: 48px,
+                x0\.68: 68px,
+                x0\.94: 94px,
+                x0\.96: 96px,
+                x1\.17: 117px,
+                x1\.65: 165px,
+                x1\.96: 196px,
+                x2\.07: 207px,
+                x2\.1:  210px,
+                x2\.18: 218px,
+                x2\.43: 243px,
+                x2\.66: 266px,
+                x3\.41: 341px,
+                x4\.18: 418px,
+                x4\.44: 444px,
+                x6\.28: 628px,
+              )
+            ),
+      ),
+    ),
+
+    "font-size": map-merge(
+      map-get($utilities, "font-size"),
+      (
+        responsive: true,
+        rfs: false,
+      ),
+    ),
+
+    "font-weight": map-merge(
+      map-get($utilities, "font-weight"),
+      (
+          responsive: true,
+          values:
+            map-merge(
+              map-get(map-get($utilities, "font-weight"), "values"),
+              (
+                medium: $font-weight-medium,
+              )
+            ),
+       )
+    ),
+
+    "rounded": map-merge(
+      map-get($utilities, "rounded"),
+      (
+         values:
+            map-merge(
+              map-get(map-get($utilities, "rounded"), "values"),
+              (
+                4: $border-radius-xl,
+              )
+            ),
+       )
+    ),
+
+    "z-index": (
+      property: z-index,
+      values: (
+        3: 3,
+        999: 999,
+      )
+    ),
+
+    "opacity": (
+      property: opacity,
+      values: (
+        25: .25,
+        50: .5,
+        75: .75,
+      )
+    ),
+
+    "ratio": (
+      property: --bs-aspect-ratio,
+      responsive: true,
+      class: ratio,
+      values: ($aspect-ratios),
+    ),
+  )
+);
