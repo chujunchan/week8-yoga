@@ -20598,6 +20598,22 @@ ul, ol {
   margin-bottom: 0px;
 }
 
+.logo {
+  width: 96px;
+  height: 30px;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.logo-secondary {
+  background-image: url(../images/DOYOGA-logo.png);
+}
+
+.logo-white {
+  background-image: url(../images/DOYOGA.png);
+}
+
 .bgCoverCenter {
   background-size: cover;
   background-position: center center;
@@ -20637,6 +20653,11 @@ ul, ol {
 
 .start-62 {
   left: 62px;
+}
+
+.shadowBorder--secondary {
+  -webkit-box-shadow: 0 0 0 4px #C0A4A5;
+          box-shadow: 0 0 0 4px #C0A4A5;
 }
 
 .scrollbar {
@@ -20770,22 +20791,6 @@ ul, ol {
 
 .datepicker-input, .datepicker-input.in-edit {
   color: #907A7B;
-}
-
-.logo {
-  width: 96px;
-  height: 30px;
-  text-indent: 101%;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-.logo-header {
-  background-image: url(../images/DOYOGA-logo.png);
-}
-
-.logo-footer {
-  background-image: url(../images/DOYOGA.png);
 }
 
 /*# sourceMappingURL=all.css.map */
